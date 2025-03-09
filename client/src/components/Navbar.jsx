@@ -16,10 +16,11 @@ const Navbar = () => {
   const handleDashboardClick = () => {
     const selected = localStorage.getItem("selected");
     if (selected === "feature2") {
-      localStorage.setItem("selected", "feature1");
-      navigate("/dashboard/feature1");
-    } else {
       navigate("/dashboard/feature2");
+    } else if (selected === "feature1") {
+      navigate("/dashboard/feature1");
+    } else if (selected === "calender") {
+      navigate("/dashboard/calender");
     }
     console.log(selected);
   };

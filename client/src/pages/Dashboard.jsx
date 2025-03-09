@@ -40,6 +40,13 @@ const Dashboard = () => {
     navigate("feature2");
   };
 
+  const handleCalender = () => {
+    const newSelected = "calender";
+    setSelected(newSelected);
+    localStorage.setItem("selected", newSelected);
+    navigate("calender");
+  };
+
   return (
     <div className="flex w-full  relative bg-[#fffffb]">
       <div className="flex flex-col justify-between items-center h-screen top-0 sticky bg-[#f8f8ec] border-r border-gray-300 px-4 py-6">
@@ -97,6 +104,84 @@ const Dashboard = () => {
               <path
                 d="M7.26855 0.25H3.23145C1.2251 0.25 0.25 1.18164 0.25 3.09961V18.9004C0.25 20.8184 1.2251 21.75 3.23145 21.75H7.26855C9.2749 21.75 10.25 20.8184 10.25 18.9004V3.09961C10.25 1.18164 9.2749 0.25 7.26855 0.25ZM8.75 18.9004C8.75 19.9131 8.53564 20.25 7.26855 20.25H3.23145C1.96436 20.25 1.75 19.9131 1.75 18.9004V3.09961C1.75 2.08691 1.96436 1.75 3.23145 1.75H7.26855C8.53564 1.75 8.75 2.08691 8.75 3.09961V18.9004ZM18.7686 0.25H14.7314C12.7251 0.25 11.75 1.18164 11.75 3.09961V11.9004C11.75 13.8184 12.7251 14.75 14.7314 14.75H18.7686C20.7749 14.75 21.75 13.8184 21.75 11.9004V3.09961C21.75 1.18164 20.7749 0.25 18.7686 0.25ZM20.25 11.9004C20.25 12.9131 20.0356 13.25 18.7686 13.25H14.7314C13.4644 13.25 13.25 12.9131 13.25 11.9004V3.09961C13.25 2.08691 13.4644 1.75 14.7314 1.75H18.7686C20.0356 1.75 20.25 2.08691 20.25 3.09961V11.9004Z"
                 fill={selected === "feature2" ? "black" : "#6b7280"}
+              />
+            </svg>
+          </div>
+
+
+          <div
+            className={`flex justify-center items-center p-2 cursor-pointer ${
+              selected === "calender" ? "bg-[#c4e456]" : "bg-transparent"
+            } rounded-md`}
+            onClick={handleCalender}
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 4C3 2.5 4.5 1 6 1H18C19.5 1 21 2.5 21 4V20C21 21.5 19.5 23 18 23H6C4.5 23 3 21.5 3 20V4Z"
+                stroke={selected === "calender" ? "black" : "#6b7280"}
+                stroke-width="2.5"
+                fill="none"
+              />
+              <path
+                d="M7 0.5V3.5"
+                stroke={selected === "calender" ? "black" : "#6b7280"}
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M17 0.5V3.5"
+                stroke={selected === "calender" ? "black" : "#6b7280"}
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+              <line
+                x1="3"
+                y1="8"
+                x2="21"
+                y2="8"
+                stroke={selected === "calender" ? "black" : "#6b7280"}
+                stroke-width="2.5"
+              />
+              <rect
+                x="6"
+                y="11"
+                width="3.5"
+                height="3.5"
+                fill={selected === "calender" ? "black" : "#6b7280"}
+              />
+              <rect
+                x="10.5"
+                y="11"
+                width="3.5"
+                height="3.5"
+                fill={selected === "calender" ? "black" : "#6b7280"}
+              />
+              <rect
+                x="15"
+                y="11"
+                width="3.5"
+                height="3.5"
+                fill={selected === "calender" ? "black" : "#6b7280"}
+              />
+              <rect
+                x="6"
+                y="16"
+                width="3.5"
+                height="3.5"
+                fill={selected === "calender" ? "black" : "#6b7280"}
+              />
+              <rect
+                x="10.5"
+                y="16"
+                width="3.5"
+                height="3.5"
+                fill={selected === "calender" ? "black" : "#6b7280"}
               />
             </svg>
           </div>

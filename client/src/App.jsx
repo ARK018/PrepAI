@@ -8,6 +8,7 @@ import Feature1 from "./pages/Feature1";
 import Feature2 from "./pages/Feature2";
 import { AuthProvider } from "./lib/context/AuthContext";
 import PrivateRoutes from "./pages/utils/PrivateRoutes";
+import Calender from "./pages/Calender";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />}>
                 <Route path="feature1" element={<Feature1 />} />
                 <Route path="feature2" element={<Feature2 />} />
+                <Route path="calender" element={<Calender />} />
               </Route>
             </Route>
           </Routes>
